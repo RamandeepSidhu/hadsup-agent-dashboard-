@@ -1,0 +1,131 @@
+<div class="dashboard-component-wrapper">
+    <div class="step-action-wrap">
+      <div class="step-action-left">
+        <div class="left-row">
+          <h1>Welcome back, Tanya</h1>
+        </div>
+        <p class="text-muted">
+          Track, manage and forecast your Commissions & Advertisers.
+        </p>
+      </div>
+      <div class="step-action-right">
+        <div class="right-row">
+          <button class="hadsup-btn hadsup-primary-default" routerLinkActive="active" routerLink>
+            Withdraw Funds <img src="../../../assets/images/share.png">
+          </button>
+          <button class="hadsup-btn hadsup-primary-dark" routerLinkActive="active" routerLink="/add-advertiser">
+            Add Advertiser
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="balance-box-wrap">
+      <div class="balance-box">
+        <p>Total Connected Advertisers</p>
+        <h3>200</h3>
+      </div>
+      <div class="balance-box">
+        <p>Total Commission Earned</p>
+        <h3>£2,420</h3>
+      </div>
+      <div class="balance-box">
+        <p>Pending Balance</p>
+        <h3>£1,210</h3>
+      </div>
+      <div class="balance-box">
+        <p>Available Balance</p>
+        <h3>£1,420</h3>
+      </div>
+    </div>
+  
+    <div class="dashboard-section">
+      <div class="dashboard-section-header">
+        <h5>My recent earnings</h5>
+        <button >
+          <span>View More</span><i class="uil uil-arrow-right"></i>
+        </button>
+      </div>
+      <div>
+        <p class="text-muted">Keep track of your recent earnings</p>
+      </div>
+      <div class="dashboard-date-table">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Visual</th>
+              <th>Advertiser Name</th>
+              <th>Running Dates</th>
+              <th>Earning %</th>
+              <th>Commission Earned</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let earning of earnings">
+              <td><img [src]="earning.visual" alt="{{ earning.advertiserName }} logo" width="20"></td>
+              <td>{{ earning.advertiserName }}</td>
+              <td>{{ earning.runningDates }}</td>
+              <td>{{ earning.earningPercentage }}%</td>
+              <td>{{ earning.commissionEarned }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="table-pagination">
+          <div class="pagination-right">
+            <button class="pagination-btn"> Previous </button>
+            <button class="pagination-btn"> Next
+            </button>
+          </div>
+          <div class="pagination-left">
+            <div> Page 0 <span>of</span> 10</div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  
+    <div class="dashboard-section">
+      <div class="dashboard-section-header">
+        <h5>Running Campaigns</h5>
+        <button >
+          <span>View More</span><i class="uil uil-arrow-right"></i>
+        </button>
+      </div>
+      <div>
+        <p class="text-muted">Keep track of running campaigns</p>
+      </div>
+      <div class="dashboard-date-table">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Visual</th>
+              <th>Advertiser Name</th>
+              <th>Running Dates</th>
+              <th>Location </th>
+              <th>Earning % </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let earning of earnings">
+              <td><img [src]="earning.visual" alt="{{ earning.advertiserName }} logo" width="20"></td>
+              <td>{{ earning.advertiserName }}</td>
+              <td>{{ earning.runningDates }}</td>
+              <td>2464 Royal Ln. Mesa, New Jersey 45463	</td>
+              <td>{{ earning.commissionEarned }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="table-pagination">
+          <div class="pagination-right">
+            <button class="pagination-btn"> Previous </button>
+            <button class="pagination-btn"> Next
+            </button>
+          </div>
+          <div class="pagination-left">
+            <div> Page 0 <span>of</span> 10</div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  

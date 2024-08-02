@@ -1,0 +1,304 @@
+// primary-btn, primary-lg-btn, primary-outline-btn, primary-outline-lg-btn
+// secondary-btn, secondary-lg-btn, secondary-outline-btn, secondary-outline-lg-btn
+// dark-btn, dark-lg-btn, dark-outline-btn, dark-outline-lg-btn
+// light-btn, light-lg-btn, light-outline-btn, light-outline-lg-btn
+// ibtn, lg-ibtn
+// danger, danger-lg, danger-trans, danger-trans-lg
+// success, success-lg, success-trans, success-trans-lg
+// disabled
+
+button {
+    @include flex-center;
+    border-radius: 50px;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    white-space: nowrap;
+
+    &:hover {
+        transition: ease-out 300ms;
+    }
+
+    .unicon-20 {
+        width: 20px !important;
+        height: 20px !important;
+        margin-left: 2px;
+        &::before {
+            font-size: 20px !important;
+        }
+    }
+
+    .unicon-24 {
+        width: 24px !important;
+        height: 24px !important;
+        margin-left: 2px;
+        &::before {
+            font-size: 24px !important;
+        }
+    }
+
+    &.md-btn {
+        padding: 8px 16px;
+        height: 36px;
+        @include font-small-bold;
+        i {
+            @extend .unicon-20;
+        }
+    }
+
+    &.lg-btn {
+        padding: 12px 24px;
+        height: 48px;
+        @include font-main-bold;
+        i {
+            @extend .unicon-24;
+        }
+    }
+
+    // primary-btn ----------------------------------------------
+    &.primary-btn {
+        @extend .md-btn;
+        background-color: $accent-red;
+        color: white !important;
+        &:hover {
+            background-color: $accent-dark-red;
+        }
+    }
+
+    &.primary-lg-btn {
+        @extend .primary-btn;
+        @extend .lg-btn;
+    }
+
+    &.primary-outline-btn {
+        @extend .md-btn;
+        background-color: transparent;
+        color: $accent-red !important;
+        border: 2px solid $accent-red;
+        &:hover {
+            background-color: $accent-red;
+            color: white !important;
+        }
+    }
+
+    &.primary-outline-lg-btn {
+        @extend .primary-outline-btn;
+        @extend .lg-btn;
+    }
+
+    &.primary-trans-btn {
+        @extend .md-btn;
+        color: $accent-red !important;
+        &:hover {
+            color: $accent-dark-red !important;
+        }
+    }
+
+    &.primary-trans-lg-btn {
+        @extend .primary-trans-btn;
+        @extend .lg-btn;
+    }
+
+    // secondary-btn ----------------------------------------------
+    &.secondary-btn {
+        @extend .md-btn;
+        background-color: $accent-cyan;
+        color: $primary-light-gray !important;
+        &:hover {
+            background-color: $accent-cyan-muted;
+        }
+    }
+
+    &.secondary-lg-btn {
+        @extend .secondary-btn;
+        @extend .lg-btn;
+    }
+
+    &.secondary-outline-btn {
+        @extend .md-btn;
+        background-color: transparent;
+        color: $accent-cyan !important;
+        border: 2px solid $accent-cyan;
+        &:hover {
+            background-color: $accent-cyan;
+            color: $primary-light-gray !important;
+        }
+    }
+
+    &.secondary-outline-lg-btn {
+        @extend .secondary-outline-btn;
+        @extend .lg-btn;
+    }
+
+    &.secondary-trans-btn {
+        @extend .md-btn;
+        color: $accent-cyan !important;
+        &:hover {
+            color: $accent-cyan-muted !important;
+        }
+    }
+
+    &.secondary-trans-lg-btn {
+        @extend .secondary-trans-btn;
+        @extend .lg-btn;
+    }
+
+    // dark-btn ----------------------------------------------
+    &.dark-btn {
+        @extend .md-btn;
+        background-color: $primary-light-gray;
+        color: white !important;
+        &:hover {
+            background-color: $color-light;
+        }
+    }
+
+    &.dark-lg-btn {
+        @extend .dark-btn;
+        @extend .lg-btn;
+    }
+
+    &.dark-outline-btn {
+        @extend .md-btn;
+        background-color: transparent;
+        color: $primary-light-gray !important;
+        border: 2px solid $primary-light-gray;
+        &:hover {
+            background-color: $primary-light-gray;
+            color: white !important;
+        }
+    }
+
+    &.dark-outline-lg-btn {
+        @extend .dark-outline-btn;
+        @extend .lg-btn;
+    }
+
+    &.dark-trans-btn {
+        @extend .md-btn;
+        color: $primary-light-gray !important;
+        &:hover {
+            color: $color-light !important;
+        }
+    }
+
+    &.dark-trans-lg-btn {
+        @extend .dark-trans-btn;
+        @extend .lg-btn;
+    }
+
+    // light-btn ----------------------------------------------
+    &.light-btn {
+        @extend .md-btn;
+        background-color: white;
+        color: $primary-light-gray-1 !important;
+        &:hover {
+            color: $primary-light-gray !important;
+            background-color: $primary-dark-color;
+        }
+    }
+
+    &.light-lg-btn {
+        @extend .light-btn;
+        @extend .lg-btn;
+    }
+
+    &.light-outline-btn {
+        @extend .md-btn;
+        background-color: transparent;
+        color: $primary-light-gray!important;
+        border: 1px solid $primary-dark-color;
+        &:hover {
+            background-color: white;
+            color: $primary-light-gray !important;
+        }
+    }
+
+    &.light-outline-lg-btn {
+        @extend .light-outline-btn;
+        @extend .lg-btn;
+    }
+
+    &.light-trans-btn {
+        @extend .md-btn;
+        color: white !important;
+        &:hover {
+            color: $primary-dark-color !important;
+        }
+    }
+
+    &.light-trans-lg-btn {
+        @extend .light-trans-btn;
+        @extend .lg-btn;
+    }
+
+    // ibtn ----------------------------------------------
+    &.ibtn {
+        padding: 8px 12px 8px 16px !important;
+    }
+    &.lg-ibtn {
+        padding: 12px 16px 12px 24px !important;
+    }
+
+    // danger ----------------------------------------------
+    &.danger {
+        @extend .md-btn;
+        color: $color-yellow;
+
+        &:hover, &.active {
+            color: $color-yellow-muted;
+            background-color: $color-light;
+        }
+
+        &-lg {
+            @extend .danger;
+            @extend .lg-btn;
+        }
+
+        &-trans{
+            @extend .danger;
+            background-color: transparent !important;
+        }
+
+        &-trans-lg {
+            @extend .danger-trans;
+            @extend .lg-btn;
+        }
+    }
+
+    // success ----------------------------------------------
+    &.success {
+        @extend .md-btn;
+        color: $primary-light-gray;
+        background-color: $color-green;
+
+        &:hover, &.active {
+            background-color: $color-green-muted;
+        }
+
+        &-lg {
+            @extend .success;
+            @extend .lg-btn;
+        }
+
+        &-trans{
+            @extend .md-btn;
+            background-color: transparent !important;
+            color: $color-green;
+            &:hover, &.active {
+                color: $color-green-muted;
+            }
+        }
+        &-trans-lg {
+            @extend .success-trans;
+            @extend .lg-btn;
+        }
+    }
+
+    // disabled ----------------------------------------------
+    &.disabled, &[disabled] {
+        opacity: 0.3;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}

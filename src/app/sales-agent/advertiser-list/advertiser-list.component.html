@@ -1,0 +1,51 @@
+<div class="dashboard-component-wrapper">
+    <div class="dashboard-section">
+      <div class="dashboard-section-header">
+        <h5>My recent earnings</h5>
+        <button class="hadsup-btn hadsup-primary-dark" routerLinkActive="active" routerLink="/add-advertiser">
+            Add Advertiser
+          </button>
+      </div>
+      <div>
+        <p class="text-muted">Keep track of your recent earnings</p>
+      </div>
+      <div class="dashboard-date-table">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Brand Name</th>
+              <th>Advertiser Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Location</th>
+              <th>Total Campaigns</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let earning of earnings">
+              <td>{{ earning.advertiserName }}</td>
+              <td>{{ earning.runningDates }}</td>
+              <td>{{ earning.earningPercentage }}%</td>
+              <td>{{ earning.commissionEarned }}</td>
+              <td>{{ earning.location }}</td>
+              <td>{{ earning.totalCampaigns
+              }}</td>
+
+            </tr>
+          </tbody>
+        </table>
+        <div class="table-pagination">
+          <div class="pagination-right">
+            <button class="pagination-btn"> Previous </button>
+            <button class="pagination-btn"> Next
+            </button>
+          </div>
+          <div class="pagination-left">
+            <div> Page 0 <span>of</span> 10</div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  

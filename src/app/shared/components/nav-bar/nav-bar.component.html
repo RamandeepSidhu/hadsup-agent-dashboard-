@@ -1,0 +1,81 @@
+<div class="header">
+    <div class="logo-wrap">
+      <div class="logo">
+        <a><img src="../../../assets/images/hadsup-logo.svg" alt="" /></a>
+        <div class="desktop-nav">
+          <button
+            class="header-nav-link"
+            routerLinkActive="active"
+            routerLink="/overview"
+          >
+            Overview
+          </button>
+          <button
+            class="header-nav-link"
+            routerLinkActive="active"
+            routerLink="/advertiser"
+          >
+            Advertiser Owner
+          </button>
+        </div>
+      </div>
+  
+      <div class="header-actions">
+        <img src="../../assets/images/setting.png" (click)="toggleSettingsMenu()" class="settings-icon" />
+        <img src="../../assets/images/bell.png" />
+        <div *ngIf="isSettingsMenuOpen" class="dropdown-menu">
+      <ul>
+        <li (click)="logout()">Logout</li>
+        <li routerLink="/register">Login</li>
+  
+      </ul>
+    </div>
+        <button class="mobile-nav-menu" (click)="toggleMenu()">
+          <svg
+            class="theme-icon"
+            width="25"
+            height="25"
+            viewBox="0 0 32 32"
+            fill="black"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.5 8.66667H26.5C26.8978 8.66667 27.2794 8.52619 27.5607 8.27614C27.842 8.02609 28 7.68696 28 7.33333C28 6.97971 27.842 6.64057 27.5607 6.39052C27.2794 6.14048 26.8978 6 26.5 6H5.5C5.10217 6 4.72064 6.14048 4.43934 6.39052C4.15804 6.64057 4 6.97971 4 7.33333C4 7.68696 4.15804 8.02609 4.43934 8.27614C4.72064 8.52619 5.10217 8.66667 5.5 8.66667ZM5.5 8.66667H26.5C26.8978 8.66667 27.2794 8.52619 27.5607 8.27614C27.842 8.02609 28 7.68696 28 7.33333C28 6.97971 27.842 6.64057 27.5607 6.39052C27.2794 6.14048 26.8978 6 26.5 6H5.5C5.10217 6 4.72064 6.14048 4.43934 6.39052C4.15804 6.64057 4 6.97971 4 7.33333C4 7.68696 4.15804 8.02609 4.43934 8.27614C4.72064 8.52619 5.10217 8.66667 5.5 8.66667ZM5.5 8.66667H26.5C26.8978 8.66667 27.2794 8.52619 27.5607 8.27614C27.842 8.02609 28 7.68696 28 7.33333C28 6.97971 27.842 6.64057 27.5607 6.39052C27.2794 6.14048 26.8978 6 26.5 6H5.5C5.10217 6 4.72064 6.14048 4.43934 6.39052C4.15804 6.64057 4 6.97971 4 7.33333C4 7.68696 4.15804 8.02609 4.43934 8.27614C4.72064 8.52619 5.10217 8.66667 5.5 8.66667Z"
+            />
+            <path
+              d="M5.5 14.667H26.5C26.8978 14.667 27.2794 14.8075 27.5607 15.0575C27.842 15.3076 28 15.6467 28 16.0003C28 16.3539 27.842 16.6931 27.5607 16.9431C27.2794 17.1932 26.8978 17.3337 26.5 17.3337H5.5C5.10217 17.3337 4.72064 17.1932 4.43934 16.9431C4.15804 16.6931 4 16.3539 4 16.0003C4 15.6467 4.15804 15.3076 4.43934 15.0575C4.72064 14.8075 5.10217 14.667 5.5 14.667Z"
+            />
+            <path
+              d="M5.5 23.333H26.5C26.8978 23.333 27.2794 23.4735 27.5607 23.7235C27.842 23.9736 28 24.3127 28 24.6663C28 25.02 27.842 25.3591 27.5607 25.6092C27.2794 25.8592 26.8978 25.9997 26.5 25.9997H5.5C5.10217 25.9997 4.72064 25.8592 4.43934 25.6092C4.15804 25.3591 4 25.02 4 24.6663C4 24.3127 4.15804 23.9736 4.43934 23.7235C4.72064 23.4735 5.10217 23.333 5.5 23.333Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="sidebar" [class.active]="isMenuOpen">
+    <div class="navigation-links-wrap">
+      <div class="menu-overlay" (click)="closeMenu()"></div>
+      <div class="logo">
+        <a><img src="../../../assets/images/hadsup-logo.svg" alt="" /></a>
+        </div>
+      <div class="sidebar-nav">
+        <button
+          routerLink="/overview"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
+          Overview
+        </button>
+        <button
+          routerLink="/advertiser"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
+          Advertiser Owner
+        </button>
+      </div>
+    </div>
+  </div>
+  

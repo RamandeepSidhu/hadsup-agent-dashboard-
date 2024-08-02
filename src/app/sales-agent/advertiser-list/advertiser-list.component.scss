@@ -1,0 +1,30 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+.dashboard-component-wrapper {
+  padding: 0px 30px;
+  h1 {
+    @include headline1;
+  }
+  h5 {
+    margin-bottom: 16px;
+    @include headline5;
+  }
+  p.text-muted {
+    margin-top: -11px;
+    color: $primary-light-gray-4;
+    @include font-small;
+  }
+
+  .dashboard-section {
+    margin-bottom: 24px;
+    .dashboard-section-header {
+      padding: 24px 0 0px;
+    }
+  }
+  .shimmers-wrapper {
+    td {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+}

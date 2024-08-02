@@ -1,0 +1,29 @@
+// Primary font
+$primary-font: 'Inter', sans-serif;
+
+// Primary Colors common use
+$primary-white: #FFFFFF;
+$primary-dark-color:#000000;
+$primary-light-gray:#EAECF0;
+$primary-dark-gray:#666666;
+$primary-light-gray-1: #485663;
+$primary-light-gray-2: #D0D5DD;
+$primary-dark-gray-3:#F5F8FF;
+$primary-light-gray-4:#475467;
+// Default Theme 
+$primary-default-dark:#0C111D;
+$color-light: #F9FAFB; 
+
+// Breakpoints
+$xs-min: 414px;
+$xs-max: 575.98px;
+$sm-min: 576px;
+$sm-max: 767.98px; // main-wrapper 300px
+$md-min: 768px;
+$md-max: 991.98px;
+$lg-min: 992px;
+$lg-max: 1199.98px; // main-wrapper 688px
+$xl-min: 1200px;
+$xl-max: 1439.98px;
+$xxl-min: 1440px;
+$xxl-max: 1535.98px;

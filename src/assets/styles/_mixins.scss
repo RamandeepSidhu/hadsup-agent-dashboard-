@@ -1,0 +1,208 @@
+@import "../styles/variables";
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// headline -----
+@mixin headline {
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@mixin headline1 {
+    @include headline;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    @media (max-width: 767px) {
+        font-size: 42px;
+        line-height: 1.2;
+    }
+}
+
+@mixin headline2 {
+    @include headline;
+    font-size: 46px;
+    line-height: 48px;
+    letter-spacing: -0.005em;
+    @media (max-width: 767px) {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+}
+
+@mixin headline3 {
+    @include headline;
+    font-size: 33px;
+    line-height: 40px;
+    @media (max-width: 767px) {
+        font-size: 23px;
+        line-height: 1.2;
+    }
+}
+
+@mixin headline4 {
+    @include headline;
+    font-size: 24px;
+    line-height: 32px;
+    @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+@mixin headline5 {
+    @include headline;
+    font-size: 18px;
+    line-height: 28px;
+    @media (max-width: 767px) {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+}
+
+// hadsup font -----
+@mixin hadsup-font($size, $height: normal, $weight: 400, $spacing: normal, $style: normal, $family:  $primary-font ) {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $spacing;
+}
+
+
+@mixin font-main {
+    @include hadsup-font(17px, 24px);
+}
+
+@mixin font-main-bold {
+    @include hadsup-font(17px, 24px, bold);
+}
+
+@mixin font-main-italic {
+    @include hadsup-font(17px, 24px, normal, normal, italic);
+}
+
+@mixin font-lead {
+    @include hadsup-font(20px, 28px);
+}
+
+@mixin font-lead-bold {
+    @include hadsup-font(20px, 28px, bold);
+}
+
+@mixin font-lead-italic {
+    @include hadsup-font(20px, 28px, normal, normal, italic);
+}
+
+@mixin font-small {
+    @include hadsup-font(14px, 20px);
+}
+
+@mixin font-small-bold {
+    @include hadsup-font(14px, 20px, bold);
+}
+
+@mixin font-x-small {
+    @include hadsup-font(10px, 16px, bold);
+}
+
+@mixin label-large {
+    @include hadsup-font(20px, 22px);
+    @media (max-width: 767px) {
+        @include hadsup-font(18px, 20px);
+    }
+}
+
+@mixin label-large-bold {
+    @include hadsup-font(20px, 22px, bold);
+    @media (max-width: 767px) {
+        @include hadsup-font(18px, 20px, bold);
+    }
+}
+
+@mixin label-x-large {
+    @include hadsup-font(24px, 24px);
+    @media (max-width: 767px) {
+        @include hadsup-font(20px, 23px);
+    }
+}
+
+@mixin label-x-large-bold {
+    @include hadsup-font(24px, 24px, 500);
+    @media (max-width: 767px) {
+        @include hadsup-font(20px, 23px, 500);
+    }
+}
+
+@mixin label-medium {
+    @include hadsup-font(18px, 18px);
+}
+
+@mixin label-medium-bold {
+    @include hadsup-font(18px, 18px, bold);
+}
+
+@mixin label-main {
+    @include hadsup-font(16px, 16px);
+}
+
+@mixin label-main-bold {
+    @include hadsup-font(16px, 16px, 500);
+}
+
+@mixin label-small {
+    @include hadsup-font(14px, 14px);
+}
+
+@mixin label-small-bold {
+
+    @include hadsup-font(14px, 14px, bold);
+}
+
+@mixin label-x-small {
+    @include hadsup-font(10px, 10px, bold);
+}
+
+
+@mixin primary-text-link {
+    @include font-small-bold;
+    color: $accent-red;
+    &:hover {
+        color: $accent-dark-red;
+    }
+}
+@mixin primary-text-link-lg {
+    @include font-main-bold;
+    color: $accent-red;
+    &:hover {
+        color: $accent-dark-red;
+    }
+}
+@mixin secondary-text-link {
+    @include font-small-bold;
+    color: $accent-cyan;
+    &:hover {
+        color: $accent-cyan-muted;
+    }
+}
+@mixin secondary-text-link-lg {
+    @include font-main-bold;
+    color: $accent-cyan;
+    &:hover {
+        color: $accent-cyan-muted;
+    }
+}
+
+/*--  Shimmer Linear Gradient  --*/
+$shimmerColor: #EAECF0 0%, #b2b2c8 46.88%, #81819a 100%;
+@mixin gradient($direcion, $shimmerColor) {
+	background: linear-gradient($direcion, $shimmerColor);
+	background: -moz-linear-gradient($direcion, $shimmerColor);
+	background: -o-linear-gradient($direcion, $shimmerColor);
+	background: -webkit-linear-gradient($direcion, $shimmerColor);
+}

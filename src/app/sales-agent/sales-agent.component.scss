@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+
+.webapp-wrapper {
+  @media (max-width: $lg-max) {
+    padding-left: 80px;
+  }
+  @media (max-width: $sm-max) {
+    padding-left: 0;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .nav-bar {
+    @media (max-width: $sm-max) {
+      position: static;
+      height: auto;
+      width: 100%;
+    }
+  }
+  .content-wrap {
+    flex: 1;
+    @media (max-width: $lg-max) {
+      max-width: 640px;
+      padding: 20px 0;
+    }
+    @media (max-width: $sm-max) {
+      max-width: 100%;
+      padding: 20px 16px;
+      width: 100%;
+    }
+  }
+
+  .footer-wrap {
+    display: flex;
+    justify-content: center;
+  }
+}

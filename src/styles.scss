@@ -1,1 +1,254 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../src/assets/styles/mixins";
+@import "../src/assets/styles/variables";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: $primary-font;
+  background-color: $primary-dark-gray-3;  touch-action: manipulation;
+}
+.step-action-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .step-action-left {
+    display: block;
+    align-items: center;
+    color: $primary-dark-color;
+    .left-row {
+      display: flex;
+      align-items: center;
+    }
+    h3 {
+      @include font-small;
+      color: $primary-dark-color;
+
+      @media (max-width: 767px) {
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  .step-action-right {
+    .right-row {
+      flex-direction: row;
+      justify-content: space-between;
+      display: flex;
+      gap: 12px;
+    }
+  }
+}
+
+.balance-box-wrap {
+  .shimmers-wrapper {
+    background-color: $primary-white !important;
+  }
+
+  @media (max-width: $sm-max) {
+    & + .balance-box-wrap {
+      margin-top: -24px !important;
+    }
+  }
+
+  .balance-box {
+    @media (max-width: $lg-max) {
+      flex: auto !important;
+      margin-bottom: 12px !important;
+    }
+
+    @media (max-width: $sm-max) {
+      flex: auto !important;
+      width: 100% !important;
+      margin: 0 0 12px !important;
+    }
+  }
+}
+button {
+  display: flex;
+  align-items: center;
+  @include font-small-bold;
+  text-decoration: none;
+  border: 1px solid $primary-light-gray-2;
+  border-radius: 8px;
+  background-color: $primary-white;
+  padding: 0 10px;
+  height: 36px;
+  cursor: pointer;
+  span {
+    padding-right: 4px;
+  }
+  i {
+    color: $primary-dark-gray;
+    font-size: 20px;
+    margin-top: 3px;
+  }
+}
+.hadsup-primary-dark {
+  background-color: $primary-dark-color !important;
+  color: $primary-white;
+}
+.hadsup-primary-default {
+  background-color: $primary-white;
+  color: $primary-dark-color;
+}
+.dashboard-section-header {
+  h5 {
+    @media (max-width: 767px) {
+      font-size: 15px !important;
+      line-height: 1.2 !important;
+    }
+  }
+
+  a {
+    span {
+      @media (max-width: 767px) {
+        font-size: 14px !important;
+      }
+    }
+  }
+}
+
+.dashboard-section-header a {
+  white-space: nowrap;
+}
+.dashboard-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0 0px;
+
+  h5 {
+    @include font-lead-bold;
+  }
+}
+
+.dashboard-date-table,
+.advance-booking-date-table {
+  border-radius: 10px;
+  border: 1px solid $primary-light-gray;
+  overflow-x:auto;
+  .table-pagination {
+    background-color:$primary-white;
+    border: 1px solid $primary-light-gray;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    position: relative;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0px;
+    }
+    .pagination-left {
+      @include font-small-bold ;
+      color: $primary-dark-color;
+      position: relative;
+      z-index: 1;
+      margin-right: 13px;
+      @media (max-width: 767px) {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        margin-top: 10px;
+      }
+      span {
+        padding: 0 4px;
+      }
+    }
+  
+    .pagination-right {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      margin: 0px 15px;
+      @media (max-width: 767px) {
+        position: static;
+        margin-top: 10px;
+      }
+      p {
+        @include font-small-bold;
+        color: $primary-dark-color;
+        cursor: pointer;
+        min-width: 30px;
+        min-height: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s;
+        &:hover,
+        &.active {
+          background-color: #f9edee;
+          color: #e0525f;
+        }
+      }
+      .pagination-btn {
+        border: 1px solid $primary-light-gray;  
+        @include font-small-bold;
+        align-items: center;
+        justify-content: center;
+        width: 87px;
+        background-color: transparent ;
+         &:disabled {
+          border: 1px solid $primary-light-gray-2;
+          color: $primary-light-gray-1;
+        }
+      }
+    }
+  }
+}
+
+.data-table {
+  font-family: $primary-font;
+  border-collapse: collapse;
+  width: 100%;
+  tr {
+    border: none;
+  }
+  td,
+  th {    
+    border-color: $primary-light-gray;
+    padding: 0px 20px;
+    text-align: left;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: $primary-dark-gray;
+    border-right-width: 0;
+    font-size: 12px;
+    font-weight: 500;
+    height: 48px;
+    white-space: nowrap;
+    background-color: $primary-white;
+    &:last-child {
+      border-right-width: 0;
+    }
+  }
+  tbody {
+    tr {
+      td {
+        color: $primary-dark-color;
+        background: $color-light;
+        cursor: auto;
+        @include label-small;        
+      }
+      &:hover {
+        background-color: unset !important;
+      }
+      &:nth-child(even) {
+        td {
+          background: $primary-white;
+        }
+      }
+      &:last-child {
+        td {
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
+}
