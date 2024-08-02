@@ -21,9 +21,9 @@
       </div>
   
       <div class="header-actions">
-        <img src="../../assets/images/setting.png" (click)="toggleSettingsMenu()" class="settings-icon" />
+        <img src="../../assets/images/setting.png" (click)="toggleSettingsMenu()" class="settings-icon"  #toggleButton  />
         <img src="../../assets/images/bell.png" />
-        <div *ngIf="isSettingsMenuOpen" class="dropdown-menu">
+        <div *ngIf="isSettingsMenuOpen" class="dropdown-menu"  #menu>
       <ul>
         <li (click)="logout()">Logout</li>
         <li routerLink="/register">Login</li>
