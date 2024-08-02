@@ -127,7 +127,9 @@ button {
 .advance-booking-date-table {
   border-radius: 10px;
   border: 1px solid $primary-light-gray;
-  overflow-x:auto;
+  .dashboard-date-table-inner{
+    overflow-x:auto;
+  }
   .table-pagination {
     background-color:$primary-white;
     border: 1px solid $primary-light-gray;  
@@ -224,7 +226,8 @@ button {
     height: 48px;
     white-space: nowrap;
     background-color: $primary-white;
-    &:last-child {
+    width: 22%;
+     &:last-child {
       border-right-width: 0;
     }
   }
