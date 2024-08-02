@@ -129,6 +129,7 @@ button {
   border: 1px solid $primary-light-gray;
   .dashboard-date-table-inner{
     overflow-x:auto;
+    border-radius: 14px 14px 0px 3px;
   }
   .table-pagination {
     background-color:$primary-white;
@@ -137,6 +138,7 @@ button {
     align-items: center;
     justify-content: space-between;
     padding: 8px 0;
+    border-radius: 0px 0px 15px 15px;
     position: relative;
     @media (max-width: 767px) {
       flex-wrap: wrap;
