@@ -6,7 +6,7 @@ import { RegisterComponent } from './shared/components/register/register.compone
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'sales-agent', loadChildren: () => import('./sales-agent/sales-agent.module').then(m => m.SalesAgentModule) },
+  { path: '', loadChildren: () => import('./sales-agent/sales-agent.module').then(m => m.SalesAgentModule) },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 
 ];
