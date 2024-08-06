@@ -1,0 +1,88 @@
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/variables";
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $color-light;
+}
+
+.form-card {
+  background: $primary-white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  font-family: $primary-font;
+
+  h1 {
+    margin-bottom: 0.5rem;
+    @include headline1;
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    color: $primary-light-gray-4;
+    @include label-small;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $primary-light-gray-4;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid $primary-light-gray-2;
+      font-size: 14px;
+      border-radius: 8px;
+      font-family: $primary-font;
+      height: 26px;
+    }
+
+    small {
+      display: block;
+      margin-top: 0.5rem;
+      color: $primary-dark-gray;
+      @include label-small;
+    }
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .get-started-btn {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    @include label-main;
+    cursor: pointer;
+    background: $primary-dark-color;
+    color: $primary-white;
+    height: 44px;
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  a {
+    color: $primary-default-dark;
+    text-decoration: none;
+    @include label-small-bold;
+  }
+}

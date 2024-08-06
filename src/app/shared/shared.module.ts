@@ -11,6 +11,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ShimmerBoxComponent } from './components/shimmer-box/shimmer-box.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     RegisterComponent,
     ShimmerBoxComponent,
     FooterComponent,
-    NavBarComponent
+    NavBarComponent,
+    ForgotPasswordComponent,
   ],
   imports: [CommonModule, FormsModule, RouterModule, ReactiveFormsModule],
-  exports: [FooterComponent,NavBarComponent],
+  exports: [FooterComponent,NavBarComponent,LoginComponent,RegisterComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class SharedModule {}

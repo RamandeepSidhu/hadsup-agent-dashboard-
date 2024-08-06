@@ -13,8 +13,8 @@ export class NavBarComponent {
   constructor(private renderer: Renderer2) {
     this.renderer.listen('window', 'click', (e: Event) => {
       if (
-        e.target !== this.toggleButton.nativeElement &&
-        e.target !== this.menu.nativeElement
+        e.target !== this.toggleButton?.nativeElement &&
+        e.target !== this.menu?.nativeElement
       ) {
         this.isSettingsMenuOpen = false;
       }

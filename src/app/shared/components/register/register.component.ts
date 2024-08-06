@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'hadsup-register',
@@ -10,26 +9,21 @@ import { AuthService } from '../../services/auth.service';
 export class RegisterComponent {
   registerForm: FormGroup | any;
 
-  constructor(private fb: FormBuilder, private authService: AuthService) {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      username: ['', Validators.required],
+      name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(8)]]
     });
   }
 
-  onSubmit(): void {
+  onSubmit() {
     if (this.registerForm.valid) {
-      this.authService.register(this.registerForm.value).subscribe(
-        response => {
-          console.log('Registration successful', response);
-        },
-        error => {
-          console.error('Registration failed', error);
-        }
-      );
+      console.log(this.registerForm.value);
+    } else {
+      console.log('Form is invalid');
     }
   }
 }

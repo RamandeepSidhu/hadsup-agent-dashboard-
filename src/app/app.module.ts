@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SalesAgentModule } from './sales-agent/sales-agent.module';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,10 +16,10 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     ReactiveFormsModule,
     SalesAgentModule,
-    SharedModule
+    SharedModule,
   ],
   exports:[SalesAgentModule],
-  providers: [],
+  providers: [provideHttpClient(withFetch())],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
